@@ -9,6 +9,7 @@ return [
         }
         return true;
     },
+    
     'file' => function (mixed $value, array $options = []): string | bool {
         $errorMessage = $options['messageFileExist'] ?? "Invalid file exist";
         if (!file_exists($value)) {
