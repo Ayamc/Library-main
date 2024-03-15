@@ -1,0 +1,200 @@
+
+body {
+    font-family: "Inter", sans-serif;
+  }
+  
+  $baseline: 1.5rem;
+  
+  $minScreen: 22rem;
+  $maxScreen: 100rem;
+  
+  $h1: 4rem;
+  $h2: 3rem;
+  $h3: 2.25rem;
+  $h4: 1.5rem;
+  $h5: 1.25rem;
+  $h6: 1rem;
+  
+  @function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    & {
+      @each $property in $properties {
+        #{$property}: $min-value;
+      }
+  
+      @media screen and (min-width: $min-vw) {
+        @each $property in $properties {
+          #{$property}: calc(
+            #{$min-value} +
+              #{strip-unit($max-value - $min-value)} *
+              ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+          );
+        }
+      }
+  
+      @media screen and (min-width: $max-vw) {
+        @each $property in $properties {
+          #{$property}: $max-value;
+        }
+      }
+    }
+  }
+  
+  
+  
+  .cc-title {
+    --degree-line-height: 1.6;
+    --factor: 1;
+    @media screen and (min-width: 390px) {
+      --degree-line-height: 1.55;
+    }
+  
+    @media screen and (min-width: 640px) {
+      --degree-line-height: 1.5;
+    }
+  
+    &_h1 {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 2rem, 2.6rem);
+      font-size: calc(var(--font-size, #{$h1}) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, #{$h1}) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_h2 {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 1.8rem, 2.2rem);
+      font-size: calc(var(--font-size, #{$h2}) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, #{$h2}) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_h3 {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 1rem, 1.4rem);
+      font-size: calc(var(--font-size, #{$h3}) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, #{$h3}) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_h4 {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 0.88rem, 1rem);
+      font-size: calc(var(--font-size, #{$h4}) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, #{$h4}) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_h5 {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 0.8rem, 0.88rem);
+      font-size: calc(var(--font-size, #{$h5}) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, #{$h5}) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+  
+    }
+  
+    &_h6 {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 0.7rem, 0.84rem);
+      font-size: calc(var(--font-size, #{$h6}) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, #{$h6}) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+  }
+  
+  .cc-text {
+    --degree-line-height: 2;
+    :lang(en) {
+      --factor: 1;
+    }
+    &_xl {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 1.2rem, 1.6rem);
+      font-size: calc(var(--font-size, 1.6rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 1.6rem) * var(--degree-line-height, 1.5)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_lg {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 0.8rem, 1rem);
+      font-size: calc(var(--font-size, 1.2rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 1.2rem) * var(--degree-line-height, 1.5)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_md {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 0.8rem, 0.9rem);
+      font-size: calc(var(--font-size, 1rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 1rem) * var(--degree-line-height, 1.5)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_sm {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 0.7rem, 0.86rem);
+  
+      font-size: calc(var(--font-size, 0.9rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 0.9rem) * var(--degree-line-height, 1.5)) /
+          var(--factor, 1)
+      );
+    }
+  
+    &_xs {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 0.67rem, 0.75rem);
+  
+      font-size: calc(var(--font-size, 0.9rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 0.9rem) * var(--degree-line-height, 1.5)) /
+          var(--factor, 1)
+      );
+    }
+  }
+  
+  .cc-display {
+    --degree-line-height: 1;
+  
+    &_xl {
+      @include fluid-type(--font-size, $minScreen, 56.25rem, 3rem, 5.5rem);
+      @media screen and (max-width: 900px) {
+        @include fluid-type(--font-size, 56.25rem, $maxScreen, 5rem, 7.2rem);
+      }
+      font-size: calc(var(--font-size, 8rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 8rem) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+    &_lg {
+      @include fluid-type(--font-size, $minScreen, $maxScreen, 3rem, 6rem);
+      font-size: calc(var(--font-size, 6rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 6rem) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+    &_md {
+      @include fluid-type(--font-size, $minScreen, 56.25rem, 1.7rem, 3rem);
+      @media screen and  (max-width: 900px) {
+        @include fluid-type(--font-size, 56.25rem, $maxScreen, 2.4rem, 3.6rem);
+      }
+      font-size: calc(var(--font-size, 4.6rem) / var(--factor, 1));
+      line-height: calc(
+        (var(--font-size, 4.6rem) * var(--degree-line-height, 1.2)) /
+          var(--factor, 1)
+      );
+    }
+  }

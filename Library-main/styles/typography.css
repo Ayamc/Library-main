@@ -1,0 +1,361 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.cc-title {
+  --degree-line-height: 1.6;
+  --factor: 1;
+}
+@media screen and (min-width: 390px) {
+  .cc-title {
+    --degree-line-height: 1.55;
+  }
+}
+@media screen and (min-width: 640px) {
+  .cc-title {
+    --degree-line-height: 1.5;
+  }
+}
+.cc-title_h1 {
+  font-size: calc(var(--font-size, 4rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 4rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-title_h1 {
+  --font-size: 2rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-title_h1 {
+    --font-size:calc(
+      2rem +
+        0.6 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-title_h1 {
+    --font-size: 2.6rem;
+  }
+}
+.cc-title_h2 {
+  font-size: calc(var(--font-size, 3rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 3rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-title_h2 {
+  --font-size: 1.8rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-title_h2 {
+    --font-size:calc(
+      1.8rem +
+        0.4 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-title_h2 {
+    --font-size: 2.2rem;
+  }
+}
+.cc-title_h3 {
+  font-size: calc(var(--font-size, 2.25rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 2.25rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-title_h3 {
+  --font-size: 1rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-title_h3 {
+    --font-size:calc(
+      1rem +
+        0.4 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-title_h3 {
+    --font-size: 1.4rem;
+  }
+}
+.cc-title_h4 {
+  font-size: calc(var(--font-size, 1.5rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 1.5rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-title_h4 {
+  --font-size: 0.88rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-title_h4 {
+    --font-size:calc(
+      0.88rem +
+        0.12 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-title_h4 {
+    --font-size: 1rem;
+  }
+}
+.cc-title_h5 {
+  font-size: calc(var(--font-size, 1.25rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 1.25rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-title_h5 {
+  --font-size: 0.8rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-title_h5 {
+    --font-size:calc(
+      0.8rem +
+        0.08 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-title_h5 {
+    --font-size: 0.88rem;
+  }
+}
+.cc-title_h6 {
+  font-size: calc(var(--font-size, 1rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 1rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-title_h6 {
+  --font-size: 0.7rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-title_h6 {
+    --font-size:calc(
+      0.7rem +
+        0.14 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-title_h6 {
+    --font-size: 0.84rem;
+  }
+}
+
+.cc-text {
+  --degree-line-height: 2;
+}
+.cc-text :lang(en) {
+  --factor: 1;
+}
+.cc-text_xl {
+  font-size: calc(var(--font-size, 1.6rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 1.6rem) * var(--degree-line-height, 1.5)) / var(--factor, 1) );
+}
+.cc-text_xl {
+  --font-size: 1.2rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-text_xl {
+    --font-size:calc(
+      1.2rem +
+        0.4 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-text_xl {
+    --font-size: 1.6rem;
+  }
+}
+.cc-text_lg {
+  font-size: calc(var(--font-size, 1.2rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 1.2rem) * var(--degree-line-height, 1.5)) / var(--factor, 1) );
+}
+.cc-text_lg {
+  --font-size: 0.8rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-text_lg {
+    --font-size:calc(
+      0.8rem +
+        0.2 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-text_lg {
+    --font-size: 1rem;
+  }
+}
+.cc-text_md {
+  font-size: calc(var(--font-size, 1rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 1rem) * var(--degree-line-height, 1.5)) / var(--factor, 1) );
+}
+.cc-text_md {
+  --font-size: 0.8rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-text_md {
+    --font-size:calc(
+      0.8rem +
+        0.1 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-text_md {
+    --font-size: 0.9rem;
+  }
+}
+.cc-text_sm {
+  font-size: calc(var(--font-size, 0.9rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 0.9rem) * var(--degree-line-height, 1.5)) / var(--factor, 1) );
+}
+.cc-text_sm {
+  --font-size: 0.7rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-text_sm {
+    --font-size:calc(
+      0.7rem +
+        0.16 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-text_sm {
+    --font-size: 0.86rem;
+  }
+}
+.cc-text_xs {
+  font-size: calc(var(--font-size, 0.9rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 0.9rem) * var(--degree-line-height, 1.5)) / var(--factor, 1) );
+}
+.cc-text_xs {
+  --font-size: 0.67rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-text_xs {
+    --font-size:calc(
+      0.67rem +
+        0.08 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-text_xs {
+    --font-size: 0.75rem;
+  }
+}
+
+.cc-display {
+  --degree-line-height: 1;
+}
+.cc-display_xl {
+  font-size: calc(var(--font-size, 8rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 8rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-display_xl {
+  --font-size: 3rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-display_xl {
+    --font-size:calc(
+      3rem +
+        2.5 *
+        ((100vw - 22rem) / 34.25)
+    );
+  }
+}
+@media screen and (min-width: 56.25rem) {
+  .cc-display_xl {
+    --font-size: 5.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cc-display_xl {
+    --font-size: 5rem;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 56.25rem) {
+  .cc-display_xl {
+    --font-size:calc(
+      5rem +
+        2.2 *
+        ((100vw - 56.25rem) / 43.75)
+    );
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 100rem) {
+  .cc-display_xl {
+    --font-size: 7.2rem;
+  }
+}
+.cc-display_lg {
+  font-size: calc(var(--font-size, 6rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 6rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-display_lg {
+  --font-size: 3rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-display_lg {
+    --font-size:calc(
+      3rem +
+        3 *
+        ((100vw - 22rem) / 78)
+    );
+  }
+}
+@media screen and (min-width: 100rem) {
+  .cc-display_lg {
+    --font-size: 6rem;
+  }
+}
+.cc-display_md {
+  font-size: calc(var(--font-size, 4.6rem) / var(--factor, 1));
+  line-height: calc( (var(--font-size, 4.6rem) * var(--degree-line-height, 1.2)) / var(--factor, 1) );
+}
+.cc-display_md {
+  --font-size: 1.7rem;
+}
+@media screen and (min-width: 22rem) {
+  .cc-display_md {
+    --font-size:calc(
+      1.7rem +
+        1.3 *
+        ((100vw - 22rem) / 34.25)
+    );
+  }
+}
+@media screen and (min-width: 56.25rem) {
+  .cc-display_md {
+    --font-size: 3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cc-display_md {
+    --font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 56.25rem) {
+  .cc-display_md {
+    --font-size:calc(
+      2.4rem +
+        1.2 *
+        ((100vw - 56.25rem) / 43.75)
+    );
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 100rem) {
+  .cc-display_md {
+    --font-size: 3.6rem;
+  }
+}
